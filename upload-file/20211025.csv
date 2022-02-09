@@ -1,3 +1,3 @@
-﻿"user_id","revenue_in_usd","utc_date"
-"472ab7e3-ej92-4d7e-bb9d-2cb1f55c97c8","0.05","2021-10-25"
-"cb1f55e3-bb9d-ej92-4d7e-2c97c8472ab7","0.72","2021-10-25"
+﻿"user_id","revenue","currency","utc_date"
+"472ab7e3-ej92-4d7e-bb9d-2cb1f55c97c8","0.05","USD","2021-10-25"
+"cb1f55e3-bb9d-ej92-4d7e-2c97c8472ab7","0.72","AUD","2021-10-25"
