@@ -1,0 +1,9 @@
+{
+  "name": "upload-file",
+  "version": "1.0.0",
+  "description": "Upload file to S3",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sdk": "^2.1031.0"
+  }
+}
