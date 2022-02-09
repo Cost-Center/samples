@@ -3,7 +3,9 @@ const AWS = require('aws-sdk');
 
 const BUCKET_NAME = '<bucket name here>';
 const ACCESS_KEY_ID = '<access key id here>';
-const SECRET_ACCESS_KEY = '<secret access key here';
+const SECRET_ACCESS_KEY = '<secret access key here>';
+const FILE_NAME = '20211025.csv';
+const PREFIX = 'ios_288429040';
 
 const s3 = new AWS.S3({
   accessKeyId: ACCESS_KEY_ID,
@@ -11,18 +13,16 @@ const s3 = new AWS.S3({
 });
 
 const main = async () => {
-  const fileName = '20211025.csv';
-  const prefix = 'ios_288429040';
-
   // read file
-  const fileContent = fs.readFileSync(fileName);
+  const fileContent = fs.readFileSync(FILE_NAME);
 
   // upload to S3
   await s3.upload({
     Bucket: BUCKET_NAME,
-    Key: `${prefix}/${fileName}`,
+    Key: `${PREFIX}/${FILE_NAME}`,
     Body: fileContent
   }).promise();
+  
   console.log('File uploaded');
 };
 
